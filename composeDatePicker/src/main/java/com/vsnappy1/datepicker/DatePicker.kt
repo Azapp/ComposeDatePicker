@@ -90,7 +90,7 @@ fun DatePicker(
     }) {
         // TODO add sliding effect when next or previous arrow is pressed
         CalendarHeader(
-            title = "${uiState.currentVisibleMonth.name} ${uiState.selectedYear}",
+            title = "${uiState.currentVisibleMonth.name} năm ${uiState.selectedYear}",
             onMonthYearClick = { viewModel.toggleIsMonthYearViewVisible() },
             onNextClick = { viewModel.moveToNextMonth() },
             onPreviousClick = { viewModel.moveToPreviousMonth() },
@@ -321,7 +321,7 @@ private fun DateView(
         // since I may need few empty cells because every month starts with a different day(Monday, Tuesday, ..)
         // that's way I add some number X into the count
         val count =
-            currentVisibleMonth.numberOfDays + currentVisibleMonth.firstDayOfMonth.number - 1
+            currentVisibleMonth.numberOfDays + currentVisibleMonth.firstDayOfMonth.number - 2
         val topPaddingForItem =
             getTopPaddingForItem(
                 count,
@@ -329,9 +329,9 @@ private fun DateView(
                 configuration.selectedDateBackgroundSize
             )
         items(count) {
-            if (it < currentVisibleMonth.firstDayOfMonth.number - 1) return@items // to create empty boxes
+            if (it < currentVisibleMonth.firstDayOfMonth.number - 2) return@items // to create empty boxes
             DateViewBodyItem(
-                value = it,
+                value = it + 1,
                 currentVisibleMonth = currentVisibleMonth,
                 selectedYear = selectedYear,
                 selectedMonth = selectedMonth,

@@ -84,6 +84,6 @@ internal object Constant {
     }
 
     fun getTimesOfDay(): List<String> {
-        return listOf("AM", "PM")
+        return listOf("SA", "CH")
     }
 }

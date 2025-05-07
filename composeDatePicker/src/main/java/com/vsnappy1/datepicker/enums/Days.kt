@@ -1,13 +1,13 @@
 package com.vsnappy1.datepicker.enums
 
 enum class Days(val abbreviation: String, val value: String, val number: Int) {
-    SUNDAY("SUN", "Sunday", 1),
-    MONDAY("MON", "Monday", 2),
-    TUESDAY("TUE", "Tuesday", 3),
-    WEDNESDAY("WED", "Wednesday", 4),
-    THURSDAY("THU", "Thursday", 5),
-    FRIDAY("FRI", "Friday", 6),
-    SATURDAY("SAT", "Saturday", 7);
+    MONDAY("TH 2", "Thứ 2", 2),
+    TUESDAY("TH 3", "Thứ 3", 3),
+    WEDNESDAY("TH 4", "Thứ 4", 4),
+    THURSDAY("TH 5", "Thứ 5", 5),
+    FRIDAY("TH 6", "Thứ 6", 6),
+    SATURDAY("TH 7", "Thứ 7", 7),
+    SUNDAY("CN", "Chủ nhật", 1);
 
     companion object {
         fun get(number: Int): Days {
